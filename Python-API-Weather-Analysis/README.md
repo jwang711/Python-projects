@@ -2,7 +2,7 @@
 
 ## Background
 
-![Equator](Images/equatorsign.png)
+![Equator](https://github.com/jwang711/python-projects/blob/master/Python-API-Weather-Analysis/images/equatorsign.png)
 
 ## WeatherPy
 
@@ -70,7 +70,7 @@ for citi in cities:
 ```
 ![](https://github.com/momoe711/Whats-the-Weather-Like/blob/master/Images/Retrieve%20APIs.JPG)
 
-Convert Raw Data to DataFrame in [WeatherPy](https://github.com/momoe711/Whats-the-Weather-Like/blob/master/WeatherPy.ipynb) and save the cleaned data to a [CSV.file](https://github.com/momoe711/Whats-the-Weather-Like/blob/master/weather_data.csv)
+Convert Raw Data to DataFrame in [WeatherPy](https://github.com/jwang711/python-projects/blob/master/Python-API-Weather-Analysis/WeatherPy.ipynb) and save the cleaned data to a [CSV.file](https://github.com/jwang711/python-projects/blob/master/Python-API-Weather-Analysis/weather_data.csv)
 ```
 weather_data = pd.DataFrame(weather_dict)
 weather_data.head()
@@ -106,7 +106,7 @@ plt.savefig("City Latitude vs. Max Temperature.png")
 plt.show()
 ```
 
-![](https://github.com/momoe711/Whats-the-Weather-Like/blob/master/Images/City%20Latitude%20vs.%20Max%20Temperature.png)
+![](https://github.com/jwang711/python-projects/blob/master/Python-API-Weather-Analysis/images/City%20Latitude%20vs.%20Max%20Temperature.png)
 
 * Humidity (%) vs. Latitude
 ```
@@ -132,7 +132,7 @@ plt.grid()
 plt.savefig("City Latitude vs. Humidity.png")
 plt.show()
 ```
-![](https://github.com/momoe711/Whats-the-Weather-Like/blob/master/Images/City%20Latitude%20vs.%20Humidity.png)
+![](https://github.com/jwang711/python-projects/blob/master/Python-API-Weather-Analysis/images/City%20Latitude%20vs.%20Humidity.png)
 
 * Cloudiness (%) vs. Latitude
 ```
@@ -158,7 +158,7 @@ plt.grid()
 plt.savefig("City Latitude vs. Cloudiness.png")
 plt.show()
 ```
-![](https://github.com/momoe711/Whats-the-Weather-Like/blob/master/Images/City%20Latitude%20vs.%20Cloudiness.png)
+![](https://github.com/jwang711/python-projects/blob/master/Python-API-Weather-Analysis/images/City%20Latitude%20vs.%20Cloudiness.png)
 
 * Wind Speed (mph) vs. Latitude
 ```
@@ -185,7 +185,7 @@ plt.savefig("City Latitude vs. Wind Speed.png")
 plt.show()
 
 ```
-![](https://github.com/momoe711/Whats-the-Weather-Like/blob/master/Images/City%20Latitude%20vs.%20Wind%20Speed.png)
+![](https://github.com/jwang711/python-projects/blob/master/Python-API-Weather-Analysis/images/City%20Latitude%20vs.%20Wind%20Speed.png)
 
 Your final notebook must:
 
@@ -193,17 +193,3 @@ Your final notebook must:
 * Perform a weather check on each of the cities using a series of successive API calls.
 * Include a print log of each city as it's being processed with the city number and city name.
 * Save both a CSV of all data retrieved and png images for each scatter plot.
-
-## Considerations
-
-* The city data is generated based on random coordinates; as such, the outputs will not be an exact match each time the code is run.
-
-* You may want to start this assignment by refreshing yourself on the [geographic coordinate system](http://desktop.arcgis.com/en/arcmap/10.3/guide-books/map-projections/about-geographic-coordinate-systems.htm).
-
-* Next, spend the requisite time necessary to study the OpenWeatherMap API. Based on your initial study, you should be able to answer  basic questions about the API: Where do you request the API key? Which Weather API in particular will you need? What URL endpoints does it expect? What JSON structure does it respond with? Before you write a line of code, you should be aiming to have a crystal clear understanding of your intended outcome.
-
-* A starter code for Citipy has been provided. However, if you're craving an extra challenge, push yourself to learn how it works: [citipy Python library](https://pypi.python.org/pypi/citipy). Before you try to incorporate the library into your analysis, start by creating simple test cases outside your main script to confirm that you are using it correctly. Too often, when introduced to a new library, students get bogged down by the most minor of errors -- spending hours investigating their entire code -- when, in fact, a simple and focused test would have shown their basic utilization of the library was wrong from the start. Don't let this be you!
-
-* Part of our expectation in this challenge is that you will use critical thinking skills to understand how and why we're recommending the tools we are. What is Citipy for? Why would you use it in conjunction with the OpenWeatherMap API? How would you do so?
-
-* In building your script, pay attention to the cities you are using in your query pool. Are you getting coverage of the full gamut of latitudes and longitudes? Or are you simply choosing 500 cities concentrated in one region of the world? Even if you were a geographic genius, simply rattling 500 cities based on your human selection would create a biased dataset. Be thinking of how you should counter this. (Hint: Consider the full range of latitudes).

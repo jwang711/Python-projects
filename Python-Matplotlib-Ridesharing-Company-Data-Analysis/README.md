@@ -1,7 +1,7 @@
 # The Power of Plots
-![Ride](https://github.com/momoe711/The-Power-of-Plots/blob/master/Pyber/ride.png)
+![Ride](https://github.com/jwang711/python-projects/blob/master/Python-Matplotlib-Ridesharing-Company-Data-Analysis/images/ride.png)
 
-## Pyber - Background
+## Background
 
 The ride sharing bonanza continues! Seeing the success of notable players like Uber and Lyft, you've decided to join a fledgling ride sharing company of your own. In your latest capacity, you'll be acting as Chief Data Strategist for the company. In this role, you'll be expected to offer data-backed guidance on new opportunities for market differentiation.
 
@@ -9,7 +9,7 @@ You've since been given access to the company's complete recordset of rides. Thi
 
 ## Objectives
 
-Merge the two datasets [City_data](https://github.com/momoe711/The-Power-of-Plots/blob/master/Pyber/data/city_data.csv)  and [Ride_data](https://github.com/momoe711/The-Power-of-Plots/blob/master/Pyber/data/ride_data.csv) and complete the [Final report](https://github.com/momoe711/The-Power-of-Plots/blob/master/Pyber/pyber_starter-Copy.ipynb) which includes the below requests.
+Merge the two datasets [city_data](https://github.com/jwang711/python-projects/blob/master/Python-Matplotlib-Ridesharing-Company-Data-Analysis/data/city_data.csv)  and [ride_data](https://github.com/jwang711/python-projects/blob/master/Python-Matplotlib-Ridesharing-Company-Data-Analysis/data/ride_data.csv) and complete the [final report](https://github.com/jwang711/python-projects/blob/master/Python-Matplotlib-Ridesharing-Company-Data-Analysis/pyber_analysis.ipynb) which includes the below requests.
 
 ```
 # Read the City and Ride Data
@@ -21,7 +21,7 @@ ride_data_df = pd.read_csv(ride_data_to_load)
 
 pyber_data = pd.merge(city_data_df, ride_data_df, on="city")
 ```
-![Ride](https://github.com/momoe711/The-Power-of-Plots/blob/master/Pyber/merged%20dataset.png)
+![Ride](https://github.com/jwang711/python-projects/blob/master/Python-Matplotlib-Ridesharing-Company-Data-Analysis/images/merged%20dataset.png)
 
 Build a Bubble Plot that showcases the relationship between four key variables:
 
@@ -30,21 +30,21 @@ Build a Bubble Plot that showcases the relationship between four key variables:
 * Total Number of Drivers Per City
 * City Type (Urban, Suburban, Rural)
 
-![Ride](https://github.com/momoe711/The-Power-of-Plots/blob/master/Pyber/Pyber%20Ride%20Sharing%20Data.png)
+![Ride](https://github.com/jwang711/python-projects/blob/master/Python-Matplotlib-Ridesharing-Company-Data-Analysis/images/Pyber%20Ride%20Sharing%20Data.png)
 
 In addition, produce the following three pie charts:
 
 * % of Total Fares by City Type
 
-![Ride](https://github.com/momoe711/The-Power-of-Plots/blob/master/Pyber/%25%20of%20Total%20Fares%20by%20City%20Type.png)
+![Ride](https://github.com/jwang711/python-projects/blob/master/Python-Matplotlib-Ridesharing-Company-Data-Analysis/images/%25%20of%20Total%20Fares%20by%20City%20Type.png)
 
 * % of Total Rides by City Type
 
-![Ride](https://github.com/momoe711/The-Power-of-Plots/blob/master/Pyber/%25%20of%20Total%20Rides%20by%20City%20Type.png)
+![Ride](https://github.com/jwang711/python-projects/blob/master/Python-Matplotlib-Ridesharing-Company-Data-Analysis/images/%25%20of%20Total%20Rides%20by%20City%20Type.png)
 
 * % of Total Drivers by City Type
 
-![Ride](https://github.com/momoe711/The-Power-of-Plots/blob/master/Pyber/%25%20of%20Total%20Drivers%20by%20City%20Type.png)
+![Ride](https://github.com/jwang711/python-projects/blob/master/Python-Matplotlib-Ridesharing-Company-Data-Analysis/images/%25%20of%20Total%20Drivers%20by%20City%20Type.png)
 
 Considerations:
 
