@@ -1,6 +1,8 @@
-## Background & Objectives
+### Background
 
-![]https://github.com/jwang711/python-projects/blob/master/Python-Employee-Analysis/images/boss.jpg)
+![](https://github.com/jwang711/python-projects/blob/master/Python-Employee-Analysis/images/boss.jpg)
+
+### Objectives
 
 Create a Python script to convert your employee records to the required format. 
 
