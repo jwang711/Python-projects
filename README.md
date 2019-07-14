@@ -12,4 +12,7 @@ description: Analyze the financial records of a company using Python scripts.
 description: Reformat employee records in a company using Python scripts.
 
 #### [Python-Matplotlib-Ridesharing-Company-Data-Analysis](https://github.com/jwang711/python-projects/tree/master/Python-Matplotlib-Ridesharing-Company-Data-Analysis)
-description: Analyze and visualize ride Sharing company's data using Pythong and Matplotlib.
+description: Analyze and visualize ride Sharing company's data using Python and Matplotlib.
+
+#### [Python-Pandas-Game-Performance-Analysis](https://github.com/jwang711/python-projects/tree/master/Python-Pandas-Game-Performance-Analysis)
+description: Analyze gaming company's data using Python (pandas).
