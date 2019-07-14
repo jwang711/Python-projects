@@ -9,7 +9,7 @@ You've since been given access to the company's complete recordset of rides. Thi
 
 ## Objectives
 
-Merge the two datasets [City_data](https://github.com/jwang711/python-projects/blob/master/Python-Matplotlib-Ridesharing-Company-Data-Analysis/data/city_data.csv)  and [Ride_data](https://github.com/jwang711/python-projects/blob/master/Python-Matplotlib-Ridesharing-Company-Data-Analysis/data/ride_data.csv) and complete the [Final report](https://github.com/jwang711/python-projects/blob/master/Python-Matplotlib-Ridesharing-Company-Data-Analysis/pyber_analysis.ipynb) which includes the below requests.
+Merge the two datasets [city_data](https://github.com/jwang711/python-projects/blob/master/Python-Matplotlib-Ridesharing-Company-Data-Analysis/data/city_data.csv)  and [ride_data](https://github.com/jwang711/python-projects/blob/master/Python-Matplotlib-Ridesharing-Company-Data-Analysis/data/ride_data.csv) and complete the [final report](https://github.com/jwang711/python-projects/blob/master/Python-Matplotlib-Ridesharing-Company-Data-Analysis/pyber_analysis.ipynb) which includes the below requests.
 
 ```
 # Read the City and Ride Data
