@@ -1,266 +1,21 @@
-# Pandas-Pandas-Pandas
-
-## Heroes of Pymoli - Background
-
-![](https://github.com/momoe711/Pandas-Pandas-Pandas/blob/master/Images/Fantasy.jpg)
-
-After landing a job as Lead Analyst for an independent gaming company, you've been assigned the task of analyzing the data for their most recent fantasy game Heroes of Pymoli.
-
-Like many others in its genre, the game is free-to-play, but players are encouraged to purchase optional items that enhance their playing experience. As a first task, the company would like you to generate a report that breaks down the game's purchasing data into meaningful insights.
-
-
-## Objectives
-
-[Final report](https://github.com/momoe711/Pandas-Pandas-Pandas/blob/master/HeroesOfPymoli/HeroesOfPymoli_Copy.ipynb) should include each of the following:
-
-### Player Count
-* Total Number of Players
-
-```python
-# Make a reference to the books.csv file path
-file_one = "Resources/purchase_data.csv"
-# Import the purchase_data.csv file as a DataFrame
-file_one_df = pd.read_csv(file_one)
-file_one_df.head()
-# Display the total number of players
-total_players = file_one_df.SN.nunique()
-summary_table = pd.DataFrame({"Total Players": [total_players]})
-
-summary_table
-```
-![](https://github.com/momoe711/Pandas-Pandas-Pandas/blob/master/Images/Player%20Count.png)
-
-### Purchasing Analysis (Total)
-* Number of Unique Items
-* Average Purchase Price
-* Total Number of Purchases
-* Total Revenue
-
-```python
-# Run basic calculations to obtain number of unique items, average price, etc.
-Create a summary data frame to hold the results
-number_unique_items = file_one_df['Item ID'].nunique()
-number_purchase = file_one_df['Purchase ID'].count()
-average_price = file_one_df['Price'].mean()
-total_revenue = file_one_df['Price'].sum()
-summary_table = pd.DataFrame({"Number of Unique Items": [number_unique_items], 
-              "Average Price": [average_price], 
-              "Number of Purchases": [number_purchase], 
-              "Total Revenue": [total_revenue]})
-
-summary_table["Average Price"] = summary_table["Average Price"].map("${:.2f}".format)
-summary_table["Total Revenue"] = summary_table["Total Revenue"].map("${:.2f}".format)
-
-summary_table
-```
-![](https://github.com/momoe711/Pandas-Pandas-Pandas/blob/master/Images/Purchasing%20Anaysis%20(Total).png)
-
-### Gender Demographics
-* Percentage and Count of Male Players
-* Percentage and Count of Female Players
-* Percentage and Count of Other / Non-Disclosed
-
-```python
-num_gender = file_one_df.groupby("Gender").nunique()['SN']
-percentage_of_players = "{:.2f}%".format(num_gender / total_players * 100)
-summary_table = pd.DataFrame({"Percentage of Players": percentage_of_players, "Total Count": num_gender})
-summary_table
-```
-![](https://github.com/momoe711/Pandas-Pandas-Pandas/blob/master/Images/Gender%20Demographics.png)
-
-
-### Purchasing Analysis (Gender)
-* The below each broken by gender
-  * Purchase Count
-  * Average Purchase Price
-  * Total Purchase Value
-  * Average Purchase Total per Person by Gender
-  
-```python
-counts_gender = file_one_df.groupby('Gender').count()['Price']
-
-average_purchase_price = file_one_df.groupby('Gender').mean()['Price']
-
-total_purchase_price = file_one_df.groupby('Gender').sum()['Price']
-
-avg = total_purchase_price / num_gender
-
-summary_table = pd.DataFrame({"Purchase Count": counts_gender,
-             "Average Purchase Price": average_purchase_price,
-             "Total Purchase Value": total_purchase_price,
-             "Avg Total Purchase per Person": avg})
-             
-summary_table["Average Purchase Price"] = summary_table["Average Purchase Price"].map("${:.2f}".format)
-summary_table["Total Purchase Value"] = summary_table["Total Purchase Value"].map("${:.2f}".format)
-summary_table["Avg Total Purchase per Person"] = summary_table["Avg Total Purchase per Person"].map("${:.2f}".format)
-
-summary_table
-```
-![](https://github.com/bigbluey/Pandas-Pandas-Pandas/blob/master/Images/Purchasing%20Analysis%20(Gender).png)
-
-### Age Demographics
-* The below each broken into bins of 4 years (i.e. &lt;10, 10-14, 15-19, etc.)
-  * Total Count
-  * Percentage of Players
+## Background
  
-```python
-# Establish bins for ages
-# Categorize the existing players using the age bins. Hint: use pd.cut()
-
-bins = [4.99, 9.99, 14.99, 19.99, 24.99, 29.99, 34.99, 39.99, 44.99]
-group_names = ["<10", "10-14", "15-19", "20-24", "25-29", "30-34", "35-39", "40+"]
-
-file_one_df["AgeRange"] = pd.cut(file_one_df["Age"], bins, labels=group_names)
-file_one_df
-
-# Calculate the numbers and percentages by age group
-
-age_group = file_one_df.groupby('AgeRange').nunique()["SN"]
-percentage_group = age_group / total_players *100
-
-# Create a summary data frame to hold the results
-summary_table = pd.DataFrame({"Total Count": age_group,
-             "Percentage of Players": percentage_group,
-             })
-             
-summary_table
-```
-![](https://github.com/momoe711/Pandas-Pandas-Pandas/blob/master/Images/Age%20Demographics.png)
-
-### Purchasing Analysis (Age)
-* The below each broken into bins of 4 years (i.e. &lt;10, 10-14, 15-19, etc.)
-  * Purchase Count
-  * Average Purchase Price
-  * Total Purchase Value
-  * Average Purchase Total per Person by Age Group
-
-```python
-#purchase count,
-agepurchase_count = file_one_df.groupby('AgeRange').count()['Purchase ID']
-#avg. purchase price
-average_purchase_price = file_one_df.groupby('AgeRange').mean()['Price']
-#purchase total per person
-total_purchase_price = file_one_df.groupby('AgeRange').sum()['Price']
-#avg. purchase total per person
-avg = total_purchase_price / age_group
-file_one_df["avg_purchase_per_person"] = avg
-
-summary_table = pd.DataFrame({"Purchase Count": agepurchase_count,
-             "Average Purchase Price": average_purchase_price,
-             "Total Purchase Value": total_purchase_price,
-             "Avg Total Purchase per Person": avg})
-
-summary_table["Average Purchase Price"] = summary_table["Average Purchase Price"].map("${:.2f}".format)
-summary_table["Total Purchase Value"] = summary_table["Total Purchase Value"].map("${:.2f}".format)
-summary_table["Avg Total Purchase per Person"] = summary_table["Avg Total Purchase per Person"].map("${:.2f}".format)
-
-summary_table
-```
-![](https://github.com/momoe711/Pandas-Pandas-Pandas/blob/master/Images/Purchasing%20Analysis%20(Age).png)
-
-### Top Spenders
-* Identify the the top 5 spenders in the game by total purchase value, then list (in a table):
-  * SN
-  * Purchase Count
-  * Average Purchase Price
-  * Total Purchase Value
-
-```python
-#purchase count,
-SNpurchase_count = file_one_df.groupby('SN').nunique()['Purchase ID']
-# avg. purchase price
-average_purchase_price = file_one_df.groupby('SN').mean()['Price']
-# #purchase total per person
-total_purchase_price = file_one_df.groupby('SN').sum()['Price']
-
-summary_table = pd.DataFrame({"Purchase Count": SNpurchase_count,
-             "Average Purchase Price": average_purchase_price,
-             "Total Purchase Value": total_purchase_price,
-             })
-             
-summary_table["Average Purchase Price"] = summary_table["Average Purchase Price"].map("${:.2f}".format)
-summary_table["Total Purchase Value"] = summary_table["Total Purchase Value"].map("${:.2f}".format)
-
-summary_table.sort_values(by=['Total Purchase Value'], ascending=False).head()
-```
-![](https://github.com/momoe711/Pandas-Pandas-Pandas/blob/master/Images/Top%20Spenders.png)
-
-### Most Popular Items
-* Identify the 5 most popular items by purchase count, then list (in a table):
-  * Item ID
-  * Item Name
-  * Purchase Count
-  * Item Price
-  * Total Purchase Value
-
-```python
-organized_data = file_one_df[["Item ID","Item Name","Price"]]
-organized_data.head()
-
-organized1_data = organized_data.groupby(["Item ID", "Item Name"])
-organized1_data
-
-purchasecount = organized1_data["Price"].count()
-totalprice = organized1_data["Price"].sum()
-itemprice = totalprice / purchasecount
-
-summary_table = pd.DataFrame({"Purchase Count": purchasecount,
-             "Item Price": totalprice / purchasecount,
-             "Total Purchase Value": organized1_data["Price"].sum(),
-             })
-             
-summary_table["Item Price"] = summary_table["Item Price"].map("${:.2f}".format)
-summary_table["Total Purchase Value"] = summary_table["Total Purchase Value"].map("${:.2f}".format)
-summary_table.sort_values(by=['Purchase Count'], ascending=False).head()
-```
-![](https://github.com/momoe711/Pandas-Pandas-Pandas/blob/master/Images/Most%20Popular%20Items.png)
-
-### Most Profitable Items
-* Identify the 5 most profitable items by total purchase value, then list (in a table):
-  * Item ID
-  * Item Name
-  * Purchase Count
-  * Item Price
-  * Total Purchase Value
-  
-```python
-organized_data = file_one_df[["Item ID","Item Name","Price"]]
-organized_data.head()
-
-organized1_data = organized_data.groupby(["Item ID", "Item Name"])
-organized1_data
-
-purchasecount = organized1_data["Price"].count()
-totalprice = organized1_data["Price"].sum()
-itemprice = totalprice / purchasecount
-
-summary_table = pd.DataFrame({"Purchase Count": purchasecount,
-             "Item Price": totalprice / purchasecount,
-             "Total Purchase Value": organized1_data["Price"].sum(),
-             })
-
-summary_table["Item Price"] = summary_table["Item Price"].map("${:.2f}".format)
-summary_table["Total Purchase Value"] = summary_table["Total Purchase Value"].map("${:.2f}".format)
-
-summary_table.sort_values(by=['Total Purchase Value'], ascending=False).head()
-```
-![](https://github.com/momoe711/Pandas-Pandas-Pandas/blob/master/Images/Most%20Profitable%20Items.png)
-
-## Observable Trends 
- * Of the 1163 active players, the vast majority are male (84%). There also exists, a smaller, but notable proportion of female players (14%).
-
- * Our peak age demographic falls between 20-24 (44.8%) with secondary groups falling between 15-19 (18.60%) and 25-29 (13.4%).
-
+![](https://github.com/jwang711/python-projects/blob/master/Python-Pandas-School-Data-Analysis/images/education.jpg)
  
- ## Academy of Py -Background
- 
- ![](https://github.com/momoe711/Pandas-Pandas-Pandas/blob/master/Images/education.jpg)
- 
- In your latest role, you've become the Chief Data Scientist for your city's school district. In this capacity, you'll be helping the school board and mayor make strategic decisions regarding future school budgets and priorities.
+In your latest role, you've become the Chief Data Scientist for your city's school district. In this capacity, you'll be helping the school board and mayor make strategic decisions regarding future school budgets and priorities.
 
 As a first task, you've been asked to analyze the district-wide standardized test results. You'll be given access to every student's math and reading scores, as well as various information on the schools they attend. Your responsibility is to aggregate the data to and showcase obvious trends in school performance.
 
-[Final Report](https://github.com/momoe711/Pandas-Pandas-Pandas/tree/master/PyCitySchools) should include each of the following:
+## Observable Trends
+
+As a whole, schools with higher budgets, did not yield better test results. By contrast, schools with higher spending per student actually (\$645-675) underperformed compared to schools with smaller budgets (
+
+As a whole, smaller and medium sized schools dramatically out-performed large sized schools on passing math performances (89-91% passing vs 67%).
+
+As a whole, charter schools out-performed the public district schools across all metrics. However, more analysis will be required to glean if the effect is due to school practices or the fact that charter schools tend to serve smaller student populations per school.
+
+## Objectives
+[Final Report](https://github.com/jwang711/python-projects/blob/master/Python-Pandas-School-Data-Analysis/PyCitySchools_starter_Copy.ipynb) should include each of the following:
 
 ### District Summary
 * Create a high leve snapshot (in table form) of the district's key metrics, including :
@@ -298,7 +53,7 @@ summary_table = pd.DataFrame({
 
 summary_table
 ```
-![](https://github.com/momoe711/Pandas-Pandas-Pandas/blob/master/Images/District%20Summary.png)
+![](https://github.com/jwang711/python-projects/blob/master/Python-Pandas-School-Data-Analysis/images/District%20Summary.png)
 
 ### School Summary
 * Create an overview table that summarizes key metrics about each school, including:
@@ -371,7 +126,7 @@ summary_table = pd.DataFrame({
 
 summary_table.sort_values(by=['Overall Passing Rate'], ascending=False).head()
 ```
-![](https://github.com/momoe711/Pandas-Pandas-Pandas/blob/master/Images/Top%20Performing%20Schools%20(By%20Passing%20Rate).png)
+![](https://github.com/jwang711/python-projects/blob/master/Python-Pandas-School-Data-Analysis/images/Top%20Performing%20Schools%20(By%20Passing%20Rate).png)
 
 ### Bottom Performing Schools (By Passing Rate)
  * Create a table that highlights the bottom 5 performing schools based on Overall Pasing Rate. Include all of the same metrics as above.
@@ -405,7 +160,7 @@ summary_table = pd.DataFrame({
 
 summary_table.sort_values(by=['Overall Passing Rate'], ascending=True).head()
 ```
-![](https://github.com/momoe711/Pandas-Pandas-Pandas/blob/master/Images/Bottom%20Performing%20Schools%20(By%20Passing%20Rate).png)
+![](https://github.com/jwang711/python-projects/blob/master/Python-Pandas-School-Data-Analysis/images/Bottom%20Performing%20Schools%20(By%20Passing%20Rate).png)
 
 ### Math Scores by Grade
  * Create a table that lists the average Math Score for students of each grade level(9th, 10th,11th,12th) at each school.
@@ -429,7 +184,7 @@ summary_table = pd.DataFrame({
 
 summary_table
 ```
-![](https://github.com/momoe711/Pandas-Pandas-Pandas/blob/master/Images/%20Math%20Scores%20by%20Grade.png)
+![](https://github.com/jwang711/python-projects/blob/master/Python-Pandas-School-Data-Analysis/images/%20Math%20Scores%20by%20Grade.png)
 
 
 
@@ -456,7 +211,7 @@ summary_table = pd.DataFrame({
 
 summary_table
 ```
-![](https://github.com/momoe711/Pandas-Pandas-Pandas/blob/master/Images/Reading%20Score%20by%20Grade.png)
+![](https://github.com/jwang711/python-projects/blob/master/Python-Pandas-School-Data-Analysis/images/Reading%20Score%20by%20Grade.png)
  
  
 ### Scores by School Spending
@@ -508,7 +263,7 @@ summary_table = pd.DataFrame({
 
 summary_table
 ```
-![](https://github.com/momoe711/Pandas-Pandas-Pandas/blob/master/Images/Scores%20by%20School%20Spending.png)
+![](https://github.com/jwang711/python-projects/blob/master/Python-Pandas-School-Data-Analysis/images/Scores%20by%20School%20Spending.png)
     
 ### Scores by School Size
  * Repeat the above breakdown, but this time group schools based on a reasonable approximation of school size (Small, Medium,large).
@@ -554,7 +309,7 @@ summary_table = pd.DataFrame({
 
 summary_table
 ```
-![](https://github.com/momoe711/Pandas-Pandas-Pandas/blob/master/Images/Scores%20by%20School%20Size.png)
+![](https://github.com/jwang711/python-projects/blob/master/Python-Pandas-School-Data-Analysis/images/Scores%20by%20School%20Size.png)
  
 ### Scores by School Type
  * Repeat the above breakdown, but this time group schools based on school type (Charter vs. DIstrict).
@@ -594,13 +349,4 @@ summary_table = pd.DataFrame({
 
 summary_table
 ```
-![](https://github.com/momoe711/Pandas-Pandas-Pandas/blob/master/Images/Scores%20by%20School%20Type.png)
-
-## Observable Trends
-
-As a whole, schools with higher budgets, did not yield better test results. By contrast, schools with higher spending per student actually (\$645-675) underperformed compared to schools with smaller budgets (
-
-As a whole, smaller and medium sized schools dramatically out-performed large sized schools on passing math performances (89-91% passing vs 67%).
-
-As a whole, charter schools out-performed the public district schools across all metrics. However, more analysis will be required to glean if the effect is due to school practices or the fact that charter schools tend to serve smaller student populations per school.
-
+![](https://github.com/jwang711/python-projects/blob/master/Python-Pandas-School-Data-Analysis/images/Scores%20by%20School%20Type.png)
