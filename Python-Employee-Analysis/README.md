@@ -1,4 +1,4 @@
-### Background & Objectives
+## Background & Objectives
 
 ![]https://github.com/jwang711/python-projects/blob/master/Python-Employee-Analysis/images/boss.jpg)
 
@@ -21,7 +21,7 @@ The Python script will analyze the votes and calculate each of the following:
   189,Heather,Andrews,11/08/1976,***-**-1797,VT
   284,Daniel,Hernandez,22/07/1976,***-**-7473,CO
   ```
-## Considerations
+### Considerations
 
   * Import modules like `csv`; to read and write files in various formats
   * Store contents in variables, lists, and dictionaries
