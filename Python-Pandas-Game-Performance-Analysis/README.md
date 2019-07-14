@@ -16,7 +16,7 @@ Like many others in its genre, the game is free-to-play, but players are encoura
 
 ## Objectives
 
-[Final report](https://github.com/momoe711/Pandas-Pandas-Pandas/blob/master/HeroesOfPymoli/HeroesOfPymoli_Copy.ipynb) should include each of the following:
+[Final report](https://github.com/jwang711/python-projects/blob/master/Python-Pandas-Game-Performance-Analysis/HeroesOfPymoli_Copy.ipynb) should include each of the following:
 
 ### Player Count
 * Total Number of Players
@@ -33,7 +33,7 @@ summary_table = pd.DataFrame({"Total Players": [total_players]})
 
 summary_table
 ```
-![](https://github.com/momoe711/Pandas-Pandas-Pandas/blob/master/Images/Player%20Count.png)
+![](https://github.com/jwang711/python-projects/blob/master/Python-Pandas-Game-Performance-Analysis/images/Player%20Count.png)
 
 ### Purchasing Analysis (Total)
 * Number of Unique Items
@@ -58,7 +58,7 @@ summary_table["Total Revenue"] = summary_table["Total Revenue"].map("${:.2f}".fo
 
 summary_table
 ```
-![](https://github.com/momoe711/Pandas-Pandas-Pandas/blob/master/Images/Purchasing%20Anaysis%20(Total).png)
+![](https://github.com/jwang711/python-projects/blob/master/Python-Pandas-Game-Performance-Analysis/images/Purchasing%20Anaysis%20(Total).png)
 
 ### Gender Demographics
 * Percentage and Count of Male Players
@@ -71,7 +71,7 @@ percentage_of_players = "{:.2f}%".format(num_gender / total_players * 100)
 summary_table = pd.DataFrame({"Percentage of Players": percentage_of_players, "Total Count": num_gender})
 summary_table
 ```
-![](https://github.com/momoe711/Pandas-Pandas-Pandas/blob/master/Images/Gender%20Demographics.png)
+![](https://github.com/jwang711/python-projects/blob/master/Python-Pandas-Game-Performance-Analysis/images/Gender%20Demographics.png)
 
 
 ### Purchasing Analysis (Gender)
@@ -101,7 +101,7 @@ summary_table["Avg Total Purchase per Person"] = summary_table["Avg Total Purcha
 
 summary_table
 ```
-![](https://github.com/bigbluey/Pandas-Pandas-Pandas/blob/master/Images/Purchasing%20Analysis%20(Gender).png)
+![](https://github.com/jwang711/python-projects/blob/master/Python-Pandas-Game-Performance-Analysis/images/Gender%20Demographics.png)
 
 ### Age Demographics
 * The below each broken into bins of 4 years (i.e. &lt;10, 10-14, 15-19, etc.)
@@ -130,7 +130,7 @@ summary_table = pd.DataFrame({"Total Count": age_group,
              
 summary_table
 ```
-![](https://github.com/momoe711/Pandas-Pandas-Pandas/blob/master/Images/Age%20Demographics.png)
+![](https://github.com/jwang711/python-projects/blob/master/Python-Pandas-Game-Performance-Analysis/images/Age%20Demographics.png)
 
 ### Purchasing Analysis (Age)
 * The below each broken into bins of 4 years (i.e. &lt;10, 10-14, 15-19, etc.)
@@ -161,7 +161,7 @@ summary_table["Avg Total Purchase per Person"] = summary_table["Avg Total Purcha
 
 summary_table
 ```
-![](https://github.com/momoe711/Pandas-Pandas-Pandas/blob/master/Images/Purchasing%20Analysis%20(Age).png)
+![](https://github.com/jwang711/python-projects/blob/master/Python-Pandas-Game-Performance-Analysis/images/Purchasing%20Analysis%20(Age).png)
 
 ### Top Spenders
 * Identify the the top 5 spenders in the game by total purchase value, then list (in a table):
@@ -188,7 +188,7 @@ summary_table["Total Purchase Value"] = summary_table["Total Purchase Value"].ma
 
 summary_table.sort_values(by=['Total Purchase Value'], ascending=False).head()
 ```
-![](https://github.com/momoe711/Pandas-Pandas-Pandas/blob/master/Images/Top%20Spenders.png)
+![](https://github.com/jwang711/python-projects/blob/master/Python-Pandas-Game-Performance-Analysis/images/Top%20Spenders.png)
 
 ### Most Popular Items
 * Identify the 5 most popular items by purchase count, then list (in a table):
@@ -218,7 +218,7 @@ summary_table["Item Price"] = summary_table["Item Price"].map("${:.2f}".format)
 summary_table["Total Purchase Value"] = summary_table["Total Purchase Value"].map("${:.2f}".format)
 summary_table.sort_values(by=['Purchase Count'], ascending=False).head()
 ```
-![](https://github.com/momoe711/Pandas-Pandas-Pandas/blob/master/Images/Most%20Popular%20Items.png)
+![](https://github.com/jwang711/python-projects/blob/master/Python-Pandas-Game-Performance-Analysis/images/Most%20Popular%20Items.png)
 
 ### Most Profitable Items
 * Identify the 5 most profitable items by total purchase value, then list (in a table):
@@ -249,4 +249,4 @@ summary_table["Total Purchase Value"] = summary_table["Total Purchase Value"].ma
 
 summary_table.sort_values(by=['Total Purchase Value'], ascending=False).head()
 ```
-![](https://github.com/momoe711/Pandas-Pandas-Pandas/blob/master/Images/Most%20Profitable%20Items.png)
+![](https://github.com/jwang711/python-projects/blob/master/Python-Pandas-Game-Performance-Analysis/images/Most%20Profitable%20Items.png)
