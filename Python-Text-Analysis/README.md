@@ -13,7 +13,7 @@ The Python script will analyze the votes and calculate each of the following:
 
 ## Results
 *[Paragraph Analysis 1](https://github.com/jwang711/python-projects/blob/master/Python-Text-Analysis/paragraph_1_analysis.txt) 
-[Paragraph Analysis 2](https://github.com/jwang711/python-projects/blob/master/Python-Text-Analysis/paragraph_2_analysis.txt) are below: 
+ and [Paragraph Analysis 2](https://github.com/jwang711/python-projects/blob/master/Python-Text-Analysis/paragraph_2_analysis.txt) are below: 
 ```text
 Paragraph Analysis
 ---------------------------
