@@ -1,6 +1,6 @@
 ## Heroes of Pymoli 
 
-### Background
+## Background
 
 ![](https://github.com/jwang711/python-projects/blob/master/Python-Pandas-Game-Performance-Analysis/images/Fantasy.jpg)
 
@@ -8,13 +8,13 @@ After landing a job as Lead Analyst for an independent gaming company, you've be
 
 Like many others in its genre, the game is free-to-play, but players are encouraged to purchase optional items that enhance their playing experience. As a first task, the company would like you to generate a report that breaks down the game's purchasing data into meaningful insights.
 
-### Observable Trends 
+## Observable Trends 
  * Of the 1163 active players, the vast majority are male (84%). There also exists, a smaller, but notable proportion of female players (14%).
 
  * Our peak age demographic falls between 20-24 (44.8%) with secondary groups falling between 15-19 (18.60%) and 25-29 (13.4%).
 
 
-### Objectives
+## Objectives
 
 [Final report](https://github.com/momoe711/Pandas-Pandas-Pandas/blob/master/HeroesOfPymoli/HeroesOfPymoli_Copy.ipynb) should include each of the following:
 
