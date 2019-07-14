@@ -1,6 +1,6 @@
-# Py-Me-Up-Charlie
+# PyBank
 
-## PyBank - Background
+## Background
 
 ![](https://github.com/jwang711/python-projects/blob/master/Python-Bank-Data-Analysis/image/revenue-per-lead.jpg)
 
@@ -23,7 +23,6 @@ The Python script will analyze the financial records to calculate each of the fo
   Greatest Increase in Profits: Feb-2017 ($1170593)
   Greatest Decrease in Profits: Sep-2017 ($-1196225)
   ```
-  
 ## Considerations
 
   * Import modules like `csv`; to read and write files in various formats
