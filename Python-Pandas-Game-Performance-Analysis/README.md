@@ -101,7 +101,7 @@ summary_table["Avg Total Purchase per Person"] = summary_table["Avg Total Purcha
 
 summary_table
 ```
-![](https://github.com/jwang711/python-projects/blob/master/Python-Pandas-Game-Performance-Analysis/images/Gender%20Demographics.png)
+![](https://github.com/jwang711/python-projects/blob/master/Python-Pandas-Game-Performance-Analysis/images/Purchasing%20Analysis%20(Gender).png)
 
 ### Age Demographics
 * The below each broken into bins of 4 years (i.e. &lt;10, 10-14, 15-19, etc.)
