@@ -22,3 +22,6 @@ description: Analyze district-wide standardized test results to help make strate
 
 #### [Python-Poll-Analysis](https://github.com/jwang711/python-projects/tree/master/Python-Poll-Analysis)
 description: Analyze and modernize the vote-counting process for a small, rural town using Python scripts to process a set of poll data. 
+
+#### [Python-Text-Analysis](https://github.com/jwang711/python-projects/tree/master/Python-Text-Analysis)
+description: Use Python scripts to automate the analysis of paragraphs.
