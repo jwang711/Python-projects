@@ -16,3 +16,7 @@ description: Analyze and visualize ride Sharing company's data using Python and 
 
 #### [Python-Pandas-Game-Performance-Analysis](https://github.com/jwang711/python-projects/tree/master/Python-Pandas-Game-Performance-Analysis)
 description: Analyze gaming company's data using Python (pandas).
+
+#### [Python-Pandas-School-Data-Analysis](https://github.com/jwang711/python-projects/tree/master/Python-Pandas-School-Data-Analysis)
+description: Analyze district-wide standardized test results to help make strategic decisions regarding future school budgets and priorities using Python (pandas).
+
