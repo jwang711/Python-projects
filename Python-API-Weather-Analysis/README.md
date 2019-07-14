@@ -2,7 +2,7 @@
 
 ## Background
 
-![Equator](Images/equatorsign.png)
+![Equator](https://github.com/jwang711/python-projects/blob/master/Python-API-Weather-Analysis/images/equatorsign.png)
 
 ## WeatherPy
 
