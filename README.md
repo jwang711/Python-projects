@@ -16,3 +16,12 @@ description: Analyze and visualize ride Sharing company's data using Python and 
 
 #### [Python-Pandas-Game-Performance-Analysis](https://github.com/jwang711/python-projects/tree/master/Python-Pandas-Game-Performance-Analysis)
 description: Analyze gaming company's data using Python (pandas).
+
+#### [Python-Pandas-School-Data-Analysis](https://github.com/jwang711/python-projects/tree/master/Python-Pandas-School-Data-Analysis)
+description: Analyze district-wide standardized test results to help make strategic decisions regarding future school budgets and priorities using Python (pandas).
+
+#### [Python-Poll-Analysis](https://github.com/jwang711/python-projects/tree/master/Python-Poll-Analysis)
+description: Analyze and modernize the vote-counting process for a small, rural town using Python scripts to process a set of poll data. 
+
+#### [Python-Text-Analysis](https://github.com/jwang711/python-projects/tree/master/Python-Text-Analysis)
+description: Use Python scripts to automate the analysis of paragraphs.
