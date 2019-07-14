@@ -14,7 +14,7 @@ The Python script will analyze the votes and calculate each of the following:
 
 ### Results
 
-*[Employee Analysis](https://github.com/momoe711/Py-Me-Up-Charlie/blob/master/PyBoss/employee_data_finished.csv) is below: 
+*[Employee Analysis](https://github.com/jwang711/python-projects/blob/master/Python-Employee-Analysis/employee_data_finished.csv) is below: 
 ```text
   Employee_ID,First_Name,Last_Name,DOB,SSN,State
   232,John,Mathews,24/02/1991,***-**-9165,ND
