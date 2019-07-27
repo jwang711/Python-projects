@@ -1,4 +1,4 @@
-# Web-Scraping-and-Document-Databases
+# Web Scraping and Document Databases on NASA Mars Website
 
 ![mission_to_mars](https://github.com/jwang711/SQL-projects/blob/master/Web-Scraping-and-Document-Databases/images/mission_to_mars.png)
 
