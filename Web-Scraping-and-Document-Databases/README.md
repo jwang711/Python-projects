@@ -1,6 +1,6 @@
 # Web Scraping and Document Databases on NASA Mars Website
 
-![mission_to_mars](https://github.com/jwang711/SQL-projects/blob/master/Web-Scraping-and-Document-Databases/images/mission_to_mars.png)
+![mission_to_mars](https://github.com/jwang711/python-projects/blob/master/Web-Scraping-and-Document-Databases/images/mission_to_mars.png)
 
 The objective is to build a web application that scrapes various websites for data related to the Mission to Mars and displays the information in a single HTML page. The following are the outlines of this project.
 
