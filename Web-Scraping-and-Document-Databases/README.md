@@ -53,6 +53,8 @@ pressure at 7.60 hPapic.twitter.com/ksOXPg28yb'
 
 * Use Pandas to convert the data to a HTML table string.
 
+![mission_to_mars](https://github.com/jwang711/python-projects/blob/master/Web-Scraping-and-Document-Databases/images/Mars%20facts%20table.png)
+
 ### Mars Hemispheres
 
 * Visit the USGS Astrogeology site [here](https://astrogeology.usgs.gov/search/results?q=hemisphere+enhanced&k1=target&v1=Mars) to obtain high resolution images for each of Mar's hemispheres.
