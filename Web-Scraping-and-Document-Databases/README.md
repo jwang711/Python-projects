@@ -53,7 +53,7 @@ pressure at 7.60 hPapic.twitter.com/ksOXPg28yb'
 
 * Use Pandas to convert the data to a HTML table string.
 
-![mission_to_mars](https://github.com/jwang711/python-projects/blob/master/Web-Scraping-and-Document-Databases/images/Mars%20facts%20table.png)
+![mission_to_mars](https://github.com/jwang711/python-projects/blob/master/Web-Scraping-and-Document-Databases/images/Mars%20facts_table.png)
 
 ### Mars Hemispheres
 
