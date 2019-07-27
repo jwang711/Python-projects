@@ -66,7 +66,7 @@ pressure at 7.60 hPapic.twitter.com/ksOXPg28yb'
 ```python
 # Output:
 hemisphere_image_urls = [
-    {"title": "Cerberus Hemisphere Enhanced", "img_url":     "http://astropedia.astrogeology.usgs.gov/download/Mars/Viking/cerberus_enhanced.tif/full.jpg"},
+    {"title": "Cerberus Hemisphere Enhanced", "img_url": "http://astropedia.astrogeology.usgs.gov/download/Mars/Viking/cerberus_enhanced.tif/full.jpg"},
     {"title": "Schiaparelli Hemisphere Enhanced", "img_url": "http://astropedia.astrogeology.usgs.gov/download/Mars/Viking/schiaparelli_enhanced.tif/full.jpg"},
     {"title": "Syrtis Major Hemisphere Enhanced", "img_url": "http://astropedia.astrogeology.usgs.gov/download/Mars/Viking/syrtis_major_enhanced.tif/full.jpg"},
     {"title": "Valles Marineris Hemisphere Enhanced", "img_url": "http://astropedia.astrogeology.usgs.gov/download/Mars/Viking/valles_marineris_enhanced.tif/full.jpg"},
