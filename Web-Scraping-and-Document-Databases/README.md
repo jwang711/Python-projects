@@ -55,7 +55,9 @@ pressure at 7.60 hPapic.twitter.com/ksOXPg28yb'
 
 ```python
 # Output:
-!open ![table](file:///Users/jingwang/Desktop/Data%20Science%20Bootcamp/python-projects/Web-Scraping-and-Document-Databases/table.html).html
+!open table.html
+
+[table](file:///Users/jingwang/Desktop/Data%20Science%20Bootcamp/python-projects/Web-Scraping-and-Document-Databases/table.html)
 
 ```
 
