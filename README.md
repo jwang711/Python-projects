@@ -2,7 +2,7 @@
 
 ## Table of Contents
 
-#### [Web-Scraping-and-Document-Databases](https://github.com/jwang711/python-projects/tree/master/Python-BeautifulSoup-Web-Scraping-and-Document-Databases)
+#### [Python-BeautifulSoup-Web-Scraping-and-Document-Databases](https://github.com/jwang711/python-projects/tree/master/Python-BeautifulSoup-Web-Scraping-and-Document-Databases)
 description: Build a web application that scrapes various websites for data related to the Mission to Mars and displays the information in a single HTML page. 
 
 #### [Python-API-Weather-Analysis](https://github.com/jwang711/python-projects/tree/master/Python-API-Weather-Analysis)
