@@ -5,6 +5,9 @@
 #### [Python-BeautifulSoup-Web-Scraping-and-Document-Databases](https://github.com/jwang711/python-projects/tree/master/Python-BeautifulSoup-Web-Scraping-and-Document-Databases)
 description: Build a web application that scrapes various websites for data related to the Mission to Mars and displays the information in a single HTML page. 
 
+#### [Python-SQLAlchemy-data-storage-and-retrieval](https://github.com/jwang711/python-projects/tree/master/Python-SQLAlchemy-data-storage-and-retrieval)
+description: Use Python and SQLAlchemy to do basic climate analysis and data exploration of your climate database. All of the following analysis should be completed using SQLAlchemy ORM queries, Pandas, and Matplotlib. 
+
 #### [Python-API-Weather-Analysis](https://github.com/jwang711/python-projects/tree/master/Python-API-Weather-Analysis)
 description: Visualize the weather of 500+ cities across the world using Python and API requests.
 
