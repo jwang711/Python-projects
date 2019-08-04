@@ -1,4 +1,4 @@
-# Python projects :ok_woman:
+# Python projects :blue_heart:
 
 ## Table of Contents
 
