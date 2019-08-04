@@ -1,4 +1,4 @@
-# python-projects
+# python-projects :relaxed:
 
 ## Table of Contents
 
