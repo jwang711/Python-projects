@@ -1,4 +1,4 @@
-# python-projects :relaxed:
+# python-projects :ok_woman:
 
 ## Table of Contents
 
