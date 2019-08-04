@@ -1,4 +1,4 @@
-# python-projects :ok_woman:
+# Python projects :ok_woman:
 
 ## Table of Contents
 
